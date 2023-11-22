@@ -1,0 +1,157 @@
+/* Adicione esses estilos ao seu arquivo styleavaliacaofisica.css */
+/* Estilos específicos para o formulário de avaliação física */
+
+/* Estilize o título "Avaliação Física" */
+
+/* General */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+h1 {
+    text-align: center;
+    color: var(--color-dark-100);
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* Inputs */
+#inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box>label {
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    border-bottom: 1px solid var(--color-dark-900);
+    cursor: text;
+}
+
+.input-field i {
+    font-size: 18px;
+    cursor: text;
+    color: var(--color-dark-900);
+}
+
+.input-field input {
+    border: none;
+    width: 260px;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+/* Estilize os campos de entrada */
+#calculo_form .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-dark-50);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilize o botão "Calcular" */
+#calcular_btn {
+    border: none;
+    background: var(--color-gradient);
+    padding: 7px;
+    border-radius: 3px;
+    color: var(--color-light-50);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+}
+
+
+/* Form Header */
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1 {
+    font-size: 40px;
+    position: relative;
+}
+
+
+#form_header h1::before {
+    position: absolute;
+    content: '';
+    width:40%;
+    height: 4px;
+    background-color: var(--color-lilas-10);
+    bottom: 2px;
+    border-radius: 5px;
+}
+
+
+
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+#calcular_btn:hover {
+    transform: scale(1.05);
+}
+
+/* Estilize a seção de resultados */
+#resultado {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Estilize a caixa de resultados com uma borda e fundo */
+#resultado {
+    border: 1px solid var(--color-dark-50);
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--color-light-50);
+}
+
+/* Estilize o rodapé */
+footer {
+    text-align: center;
+    color: var(--color-dark-100);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Adicione mais estilos personalizados conforme necessário */
+

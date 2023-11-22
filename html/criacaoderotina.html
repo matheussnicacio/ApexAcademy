@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/criacaodetreinos.css">
+    <link rel="stylesheet" href="../css/stylelogincadastro.css">
+
+    <link rel="stylesheet" href="../css/criacaoderotinas.css">
+
+
+
+    <link rel="shortcut icon" href="../imagens/logo (2).png (2).png" type="image/x-icon">
+    <title>SA</title>
+</head>
+<style>
+    .nav-list a:hover {
+        font-size: 19px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="../html/index.php">
+                <img src="../imagens/Design_sem_nome-removebg-preview.png" alt="header">
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../html/index.php">Início</a></li>
+                <li><a href="../html/avaliacaofisica.html">Avalição Física</a></li>
+                <li><a href="../html/inicioT.html">Criação de Treinos</a></li>
+                <li><a href="../html/explicacoes.html">Explicações de Exercícios</a></li>
+                <li><a href="../php/login.php">Cadastro</a></li>
+            </ul>
+
+            <a href="../php/update_profile.php">
+                <i class="fas fa-user-circle" style="font-size: 54px;"></i> <!-- Ícone de perfil -->
+            </a>
+        </nav>
+
+        </div>
+    </header>
+
+    
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <!-- Formulário para criar rotina de exercícios -->
+                        <form id="exercicio-form" action="../php/inserir_rotina.php" method="post">
+
+                            
+
+   <!-- FORM HEADER -->
+   <div id="ffm_header">
+    <center> </center>
+    <h1>Criar Nova Rotina de Exercícios</h1>
+
+    <i id="" class=""></i>
+  </div>
+
+
+                        
+
+
+
+
+                            <label for="titulo">Título:</label>
+                            <input type="text" id="titulo" name="titulo" required>
+                            <label for="descricao">Descrição:</label>
+                            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                            <h3>Exercícios</h3>
+                            <div id="exercicios-container">
+                                <div class="exercicio">
+                                    <h4>Exercício</h4>
+                                    <label for="nome_exercicio">Nome do Exercício:</label>
+                                    <input type="text" class="nome_exercicio" name="nome_exercicio[]" required>
+
+                                    <label for="series">Séries:</label>
+                                    <input type="number" class="series" name="series[]" required>
+
+                                    <label for="repeticoes">Repetições:</label>
+                                    <input type="number" class="repeticoes" name="repeticoes[]" required>
+
+                                    <button type="button" class="remover-exercicio">Remover Exercício</button>
+                                </div>
+                            </div>
+
+                            <center> 
+                            <button class="adicionar-exercicio"type="button" id="adicionar-exercicio">Adicionar Exercício</button>
+                            <button class="salvar-rotina"type="submit">Salvar Rotina</button>
+                        </center>
+
+
+
+                        </form>
+                    </div>
+                </div>
+                </form>
+            </div>
+</body>
+
+</html>
+<!-- JAVASCRIPT -->
+<script src="../js/criacaoderotina.js"></script>
+
+<script src="../js/criacaorotina.js"></script>
+<script src="../js/mobile-navbar.js"></script>
+<script src="../js/script.js"></script>

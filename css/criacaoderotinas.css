@@ -1,0 +1,372 @@
+/** Variables - colors **/
+:root {
+    /* Light */
+    --color-light-50: #f8fafc;
+
+    /* Dark */
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    /* Purple */
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
+    --color-purple-300: #23232e;
+
+    /*White */
+    ---color-white-50: #fff;
+
+    --color-lilas-10: #C4CBC9;
+
+    /*Green */
+
+    --color-green-10: rgb(129, 230, 129);
+    --color-green-20: rgb(79, 202, 79);
+    --color-green-30: rgb(19, 163, 19);
+
+    /*Red */
+
+    --color-red-10: rgb(241, 93, 93);
+    --color-red-20: rgb(250, 64, 64);
+    --color-red-30: rgb(236, 6, 6);
+
+
+    /* Blue */
+    --color-blue-10: rgb(81, 195, 199);
+    --color-blue-20: rgb(32, 177, 182);
+    --color-blue-30: rgb(22, 155, 160);
+
+
+    /* Gradient */
+
+
+    --color-gradient: linear-gradient(90deg, var(--color-purple-300), var(--color-dark-100), var(--color-dark-900));
+    --color-gradient-green: linear-gradient(90deg, var(--color-green-20), var(--color-green-30));
+    --color-gradient-red: linear-gradient(90deg, var(--color-red-20), var(--color-red-30));
+    --color-gradient-blue: linear-gradient(90deg, var(var(--color-blue-10) var(--color-blue-30)))
+
+    }
+
+
+    #inputs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .input-box>label {
+        font-size: 14px;
+        color: var(--color-dark-50);
+    }
+
+    .input-field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 3px;
+        border-bottom: 1px solid var(--color-dark-900);
+        cursor: text;
+    }
+
+    .input-field i {
+        font-size: 18px;
+        cursor: text;
+        color: var(--color-dark-900);
+    }
+
+    .input-field input {
+        border: none;
+        width: 260px;
+        background-color: transparent;
+        font-size: 18px;
+        padding: 0px 5px;
+    }
+
+    .input-field input:focus {
+        outline: none;
+    }
+
+
+
+
+
+    /* General */
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+    h1 {
+        text-align: center;
+        color: var(--color-dark-100);
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+
+    /* Form Header */
+    #ffm_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #ffm_header h1 {
+        font-size: 40px;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    #ffm_header h1::before {
+        position: absolute;
+        content: '';
+        width: 15%;
+        height: 4px;
+        background-color: var(--color-lilas-10);
+        bottom: 3px;
+        border-radius: 5px;
+
+    }
+
+
+    h1 {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-top: 20px;
+        font-size: xx-large;
+
+    }
+
+    .exercicio {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+
+
+
+    }
+
+    .series-table {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .series-table th {
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .series-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .btn-add-serie {
+        border: none;
+        background: var(--color-gradient-green);
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-light-50);
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .btn-add-serie:hover {
+        transform: scale(1.05);
+    }
+
+
+
+    .salvar-rotina {
+        border: none;
+        background: linear-gradient(to right, #72aceb, #0a74da, rgb(66, 66, 214));
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-dark-900);
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        width: 300px;
+    }
+
+    .salvar-rotina:hover {
+        transform: scale(1.05);
+    }
+
+
+.series{
+
+    background-color: #eceeed;
+ 
+}
+
+ .repeticoes{
+
+background-color: #eceeed;
+ }
+
+
+
+
+
+
+    .adicionar-exercicio {
+        border: none;
+        background: var(--color-gradient);
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-light-50);
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        width: 300px;
+    }
+
+    .adicionar-exercicio:hover {
+        transform: scale(1.05);
+    }
+
+    .remover-exercicio {
+        border: none;
+        background: var(--color-gradient-red);
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-light-50);
+        font-weight: bold;
+        font-size: 14.5px;
+        cursor: pointer;
+        width: 200px;
+        margin-bottom: 19px;
+
+    }
+
+
+    .remover-exercicio:hover {
+        transform: scale(1.05);
+    }
+
+
+
+    .btn-excluir-exercicio {
+        border: none;
+        background: var(--color-gradient-red);
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-light-50);
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        width: 300px;
+
+    }
+
+
+    .btn-excluir-exercicio:hover {
+        transform: scale(1.05);
+    }
+
+
+    .series-table {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .series-table th {
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .series-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .btn-excluir-exercicio {
+        border: none;
+        background: var(--color-gradient-red);
+        padding: 7px;
+        border-radius: 3px;
+        color: var(--color-light-50);
+        font-weight: bold;
+        font-size: 18px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .btn-excluir-exercicio:hover {
+        transform: scale(1.05);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .series-table {
+        width: 100%;
+        margin-top: 5px;
+        border-collapse: collapse;
+    }
+
+    .series-table th,
+    .series-table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .series-table th {
+        background-color: #ffffff;
+        color: #0265fa;
+    }
+
+    .series-table td {
+        background-color: #ffffff;
+    }

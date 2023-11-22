@@ -1,0 +1,114 @@
+
+/** Variables - colors **/
+:root {
+    /* Light */
+    --color-light-50: #f8fafc;
+
+    /* Dark */
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    /* Purple */
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
+    --color-purple-300: #23232e;
+
+    /*White */
+    ---color-white-50: #fff;
+
+    --color-lilas-10: #C4CBC9;
+
+    /*Green */
+
+    --color-green-10: rgb(129, 230, 129);
+    --color-green-20: rgb(79, 202, 79);
+    --color-green-30: rgb(19, 163, 19);
+
+/*Red */
+
+--color-red-10: rgb(241, 93, 93);
+--color-red-20: rgb(250, 64, 64);
+--color-red-30: rgb(236, 6, 6);
+
+    /* Gradient */
+    --color-gradient: linear-gradient(90deg, var(--color-purple-300), var(--color-dark-100), var(--color-dark-900));
+    --color-gradient-green: linear-gradient(90deg, var(--color-green-20), var(--color-green-30));
+    --color-gradient-red: linear-gradient(90deg, var(--color-red-20), var(--color-red-30));
+
+
+}
+
+
+
+/* General */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    text-align: center;
+    color: var(--color-dark-100);
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+
+/* Form Header */
+#fm_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fm_header h1 {
+    font-size: 40px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#fm_header h1::before {
+    position: absolute;
+    content: '';
+    width: 8%;
+    height: 4px;
+    background-color: var(--color-lilas-10);
+    bottom: 3px;
+    border-radius: 5px;
+    
+}
+
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}

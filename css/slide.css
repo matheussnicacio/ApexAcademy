@@ -1,0 +1,224 @@
+/* Slide Carrosel */
+section.slider {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 400%;
+  height: auto;
+  display: flex;
+}
+
+.slider-content input,
+.img-mobile {
+  display: none;
+}
+
+.slide-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+}
+
+.slide-box img {
+  width: 100%;
+}
+
+.nav-manual,
+.nav-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-manual .manual-btn,
+.nav-auto div {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#radio1:checked~.nav-auto .auto-btn1,
+#radio2:checked~.nav-auto .auto-btn2,
+#radio3:checked~.nav-auto .auto-btn3 {
+  background-color: rgb(255, 255, 255);
+}
+
+#radio1:checked~.primeiro {
+  margin-left: 0%;
+}
+
+#radio2:checked~.primeiro {
+  margin-left: -25%;
+}
+
+#radio3:checked~.primeiro {
+  margin-left: -50%;
+}
+
+.slide-box {
+  width: 25%;
+  height: auto;
+
+
+  position: relative;
+  text-align: center;
+
+
+  overflow: hidden;
+}
+
+.slide-content {
+  position: relative;
+}
+
+  
+
+
+
+
+
+.slide-text {
+  position: absolute;
+  top: 50%;
+
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  /* Cor do texto */
+}
+
+.slide-text h2,
+.slide-text h4 {
+  margin: 0;
+
+}
+
+.slide-text h2 {
+
+  font-size: 75px;
+}
+
+.slide-text h4 {
+
+  font-size: 35px;
+}
+
+
+
+
+.slide-text button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 60px;
+  font-size: 20px;
+
+
+  border: none;
+
+
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slide-text button:hover {
+  background-color: #dddddd;
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+  }
+
+  .nav-auto,
+  .nav-manual {
+    margin-top: 60%;
+
+
+  }
+
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+  .slide-text {
+    position: absolute;
+    top: 63%;
+
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    /* Cor do texto */
+  }
+
+
+
+  .slide-text h2 {
+
+    font-size: 20px;
+  }
+
+  .slide-text h4 {
+
+    font-size: 10px;
+  }
+
+
+
+
+  .slide-text button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 40px;
+    font-size: 10px;
+
+
+    border: none;
+
+
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+
+
+

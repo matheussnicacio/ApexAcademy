@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/criacaodetreinos.css">
+    <link rel="stylesheet" href="../css/stylelogincadastro.css">
+    <link rel="shortcut icon" href="../imagens/logo (2).png (2).png" type="image/x-icon">
+    <title>SA</title>
+</head>
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        color: var(--color-dark-100);
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+
+    /* Form Header */
+    #fm_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #fm_header h1 {
+        font-size: 40px;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    #fm_header h1::before {
+        position: absolute;
+        content: '';
+        width: 8%;
+        height: 4px;
+        background-color: var(--color-lilas-10);
+        bottom: 3px;
+        border-radius: 5px;
+
+    }
+
+
+    h1 {
+        margin: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #afaeb3;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .container3 {
+        max-width: 100%;
+        padding-bottom: 1100px;
+        background-color: #afaeb3;
+        border-radius: 15px;
+
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ffffff;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #808080;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        padding-right: 0px;
+        text-align: left;
+    }
+
+    th {
+        background-color: rgb(16, 14, 26);
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--color-light-50);
+    }
+
+    td {
+        background-color: #b0adb6;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    header {
+        background-color: #1a1a1a;
+
+        color: #ffffff;
+    }
+
+    .nav-list a {
+        color: #ffffff;
+    }
+
+    .nav-list a:hover {
+        color: #3a68ff;
+    }
+
+    a:hover {
+
+        color: rgb(255, 0, 0);
+        font-size: 19px;
+    }
+
+    a {
+        color: #c95d5d;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .table-link a:hover {
+        color: #b30000;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+
+    }
+
+
+    @media (max-width: 767px) {
+        .container-grid {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        .container {
+            max-width: 90%;
+            border-radius: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            padding-right: 0px;
+            text-align: left;
+        }
+    }
+
+    p :hover {
+
+        color: #00f;
+        transition: 0.3s;
+
+    }
+
+    .a1{
+
+color : white
+
+
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="../html/index.php">
+                <img src="../imagens/Design_sem_nome-removebg-preview.png" alt="header">
+            </a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../html/index.php">Início</a></li>
+                <li><a href="../html/avaliacaofisica.html">Avalição Física</a></li>
+                <li><a href="../html/inicioT.html">Criação de Treinos</a></li>
+                <li><a href="../html/explicacoes.html">Explicações de Exercícios</a></li>
+                <li><a href="../php/login.php">Cadastro</a></li>
+              </ul>
+        
+              <a href="../php/update_profile.php">
+                <i class="fas fa-user-circle" style="font-size: 54px; color:#fff"></i> <!-- Ícone de perfil -->
+              </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <div id="inputs">
+
+
+            <div id="fm_header">
+                <h1>Explicações de Exercícios</h1>
+            </div>
+            <main>
+                <main class="container-grid">
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Peitoral</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Peitoral</td>
+                                <td>Supino Reto barra</td>
+                                <td><a href="https://youtu.be/sqOw2Y6uDWQ" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Peitoral</td>
+                                <td>Supino Reto Halteres</td>
+                                <td><a href="https://youtu.be/Spbmm66NsuY" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Peitoral</td>
+                                <td>Supino inclinado barra</td>
+                                <td><a href="https://youtu.be/lBCjPgnIzKk" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Peitoral</td>
+                                <td>Supino inclinado Halteres</td>
+                                <td><a href="https://youtu.be/Z1rCZ0YHrP0" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Peitoral</td>
+                                <td>Supino declinado barra</td>
+                                <td><a href="https://youtu.be/hZ9woVlzGdA" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Dorsais</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Dorsais</td>
+                                <td>Barra Fixa Peg Pronada</td>
+                                <td><a href="https://youtu.be/JX_YM7Bp26U" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Dorsais</td>
+                                <td>Puxada Vertical Peg Pronada</td>
+                                <td><a href="https://youtu.be/H09EvebBsB4" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Dorsais</td>
+                                <td>Puxada Vertical Peg Supinada</td>
+                                <td><a href="https://youtu.be/v1rPzvJvwIE" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Dorsais</td>
+                                <td>Remada Curvada Cavalinho</td>
+                                <td><a href="Remada Curvada Cavalinho" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Dorsais</td>
+                                <td>Remada Máquina Peg Pronada </td>
+                                <td><a href="https://youtu.be/_g6GeyWVivI" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Deltóides/Ombros</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Deltóides</td>
+                                <td>Elevação Lateral Halteres</td>
+                                <td><a href="Elevação Lateral Halteres" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Deltóides</td>
+                                <td>Elevação Frontal Barra Peg Pronada</td>
+                                <td><a href="https://youtu.be/jXUIrrvlR_0 " target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Deltóides</td>
+                                <td>Desenvolvimento Halteres</td>
+                                <td><a href="https://youtu.be/4pU-kV-OaVU" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Deltóides</td>
+                                <td>Elevação Lateral Cross Anterior </td>
+                                <td><a href="https://youtu.be/8KOat8ZsidI" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Trapézio</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Trapézio</td>
+                                <td>Encolhimento Barra Anterior</td>
+                                <td><a href="E https://youtu.be/FutT8_yYJ58" target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Trapézio</td>
+                                <td>Remada Alta Barra</td>
+                                <td><a href="https://youtu.be/Z6jSLKXZ0Ag" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Tríceps</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Tríceps</td>
+                                <td>Tríceps Pulley Corda</td>
+                                <td><a href="https://youtu.be/_KrR8248eLo" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Tríceps</td>
+                                <td>Rosca Francesa Anilha</td>
+                                <td><a href="https://youtu.be/D2oQJTz-RCA" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Tríceps</td>
+                                <td>Rosca Testa Barra Peg Pronada</td>
+                                <td><a href="https://youtu.be/orMEOzQjiAs" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Bíceps</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Bíceps</td>
+                                <td>Rosca Martelo Halteres</td>
+                                <td><a href=" https://youtu.be/KnymofpyiIQ" target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bíceps</td>
+                                <td>Rosca Martelo Halteres</td>
+                                <td><a href=" https://youtu.be/KnymofpyiIQ" target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bíceps</td>
+                                <td>Rosca Concentrada</td>
+                                <td><a href="https://youtu.be/Cryg5VkGQBw" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Antebraço</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Antebraço</td>
+                                <td>Flexão de Punho Barra Sentado</td>
+                                <td><a href=" https://youtu.be/pfNPsnjVWb4" target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Antebraço</td>
+                                <td>Extensão de Punho Barra Sentado</td>
+                                <td><a href="https://youtu.be/gHY5opbOhNE" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Quadríceps</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Quadríceps</td>
+                                <td>Cadeira Extensora</td>
+                                <td><a href="https://youtu.be/1f1DjMr68hY" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Quadríceps</td>
+                                <td>Leg Press </td>
+                                <td><a href="Leg Press https://youtu.be/kyESFAj3W0E" target="_blank">Assista ao
+                                        vídeo</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quadríceps</td>
+                                <td>Agachamento Livre </td>
+                                <td><a href="https://youtu.be/4TG8JdU6NPU" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Posterior de coxa</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Posterior de coxa</td>
+                                <td>Mesa Flexora </td>
+                                <td><a href="Mesa Flexora " target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Posterior de coxa</td>
+                                <td>Stiff Barra</td>
+                                <td><a href="https://youtu.be/Xgql23RkpBk" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Glúteos</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Glúteos</td>
+                                <td>Elevação Pélvica Barra </td>
+                                <td><a href="https://youtu.be/jqgDVIv581k" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Glúteos</td>
+                                <td>Cadeira Abdutora</td>
+                                <td><a href="https://youtu.be/yVZ0Vs7j6EM" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Panturrilhas</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Panturrilhas</td>
+                                <td>Gêmeos Em Pé Máquina</td>
+                                <td><a href="https://youtu.be/hlQbAQB61_Y" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Panturrilhas</td>
+                                <td>Gêmeos Sentado Máquina</td>
+                                <td><a href=" https://youtu.be/gBIxBWBorB8" target="_blank">Assista ao vídeo</a>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>Abdômen</th>
+                                <th>Link da execução</th>
+                            </tr>
+                            <tr>
+                                <td>Abdômen</td>
+                                <td>Supra</td>
+                                <td><a href="https://youtu.be/N5SL7rhM07c" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                            <tr>
+                                <td>Abdômen</td>
+                                <td>Infra</td>
+                                <td><a href="https://youtu.be/8slFJ9J31lM" target="_blank">Assista ao vídeo</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <h1>Quantas Séries fazer por Semana?</h1>
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>séries</th>
+                                <th>repetições por série</th>
+                            </tr>
+                            <tr>
+                                <td>Peito</td>
+                                <td>9-12 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>dorsais/costas</td>
+                                <td>9-12 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Deltóides/ombros</td>
+                                <td>6-9 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <h1>Quantas Séries fazer por Semana?</h1>
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>séries</th>
+                                <th>repetições por série</th>
+                            </tr>
+                            <tr>
+                                <td>Trapézio</td>
+                                <td>6-9 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Tríceps</td>
+                                <td>6-9 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Bíceps</td>
+                                <td>6-9 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Quadríceps</td>
+                                <td>9-12 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="container">
+                        <h1>Quantas Séries fazer por Semana?</h1>
+                        <table>
+                            <tr>
+                                <th>Grupo Muscular</th>
+                                <th>séries</th>
+                                <th>repetições por série</th>
+                            </tr>
+                            <tr>
+                                <td>Posterior de coxa</td>
+                                <td>9-12 séries</td>
+                                <td>8-12 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Panturrilhas</td>
+                                <td>4-9 séries</td>
+                                <td>10-20 repetições</td>
+                            </tr>
+                            <tr>
+                                <td>Abdômen</td>
+                                <td>6-9 séries</td>
+                                <td>12-15 repetições</td>
+                            </tr>
+                        </table>
+                    </div>
+                </main>
+            </main>
+        </div>
+</body>
+</main>
+
+
+
+
+
+
+
+<script src="../js/mobile-navbar.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/slide.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+
+</html>

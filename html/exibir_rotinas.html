@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exibir Rotinas</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Lista de Rotinas</h1>
+        <ul id="lista-rotinas">
+            <!-- Os resultados serão exibidos aqui -->
+        </ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Faz uma requisição AJAX para obter os dados do servidor
+    fetch('exibir_rotinas.php')
+        .then(response => response.json())
+        .then(data => {
+            // Manipula os dados recebidos e os exibe na página
+            const listaRotinas = document.getElementById('lista-rotinas');
+
+            data.forEach(rotina => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>Rotina:</strong> ${rotina.titulo} - ${rotina.descricao}<br>
+                                      <strong>Exercício:</strong> ${rotina.nome_exercicio}<br>
+                                      <strong>Séries:</strong> ${rotina.series}<br>
+                                      <strong>Repetições:</strong> ${rotina.repeticoes}<br>`;
+                listaRotinas.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Erro na requisição:', error));
+});
+</script>
